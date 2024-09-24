@@ -41,7 +41,7 @@ function filterPrivateData(employees) {
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
-  console.log(filterPrivateData(employeeRecords.));
+  console.log(filterPrivateData(employeeRecords));
   console.assert(filterPrivateData.length === 1);
 }
 
