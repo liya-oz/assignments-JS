@@ -1,0 +1,16 @@
+*** Unit Test Error Report ***
+
+console.log
+    [ 4, 8 ]
+
+      at log (1-JavaScript/Week3/assignment/ex1-doubleEvenNumbers.test.js:25:11)
+
+ PASS  1-JavaScript/Week3/assignment/ex1-doubleEvenNumbers.test.js
+  returns the even numbers and doubles them
+    ✅ doubleEvenNumbers should take the even numbers and double them (53 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        2.398 s
+Ran all test suites matching /\/Users\/yuliiaozkan\/Desktop\/assignments-JS\/1-JavaScript\/Week3\/assignment\/ex1-doubleEvenNumbers.test.js/i.

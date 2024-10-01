@@ -1,0 +1,17 @@
+*** Unit Test Error Report ***
+
+console.log
+    €187.50
+
+      at Object.log (1-JavaScript/Week3/assignment/ex2-mondaysWorth.test.js:41:9)
+
+ PASS  1-JavaScript/Week3/assignment/ex2-mondaysWorth.test.js
+  js-wk3-mondaysWorth
+    ✅ computeEarnings should take two parameters (4 ms)
+    ✅ computeEarnings should compute the earnings as a formatted Euro amount (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        1.086 s
+Ran all test suites matching /\/Users\/yuliiaozkan\/Desktop\/assignments-JS\/1-JavaScript\/Week3\/assignment\/ex2-mondaysWorth.test.js/i.
