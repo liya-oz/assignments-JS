@@ -27,22 +27,31 @@ const cartForParty = {
   water: 0.99,
 };
 
-function calculateTotalPrice(cart) {
-  let totalAmount = 0;
-  for (let key in cart) {
-    totalAmount += cart[key];
-  }
-  return `Total: €${totalAmount.toFixed(2)}`;
+function calculateTotalPrice(cartItems) {
+  const totalAmount = Object.values(cartItems).reduce((acc, price) => acc + price, 0);
+return `Total: €${totalAmount.toFixed(2)}`;
 }
 
 // ! Test functions (plain vanilla JavaScript)
 function test1() {
-  console.log(calculateTotalPrice.length);
+// Test 1: The calculateTotalPrice function should take one parameter.
+  const parameterCount = calculateTotalPrice.length;
+  if (parameterCount === 1) {
+    console.log('Great! The function calculateTotalPrice correctly accepts 1 parameter.');
+  } else {
+    console.log(`Error: The function calculateTotalPrice accepts ${parameterCount} parameters instead of 1.`);
+  }
 }
 
 function test2() {
-  console.log(calculateTotalPrice(cartForParty));
-  // TODO replace this comment with your code
+// Test 2: The function should return the correct total for cartForParty.
+  const expectedTotal = 'Total: €9.79';
+  const actualResult = calculateTotalPrice(cartForParty);
+  if (actualResult === expectedTotal) {
+    console.log('Done! The function calculateTotalPrice returned the correct total.');
+  } else {
+    console.log(`Error: Expected "${expectedTotal}" and received "${actualResult} are not matching".`);
+  }
 }
 
 function test() {

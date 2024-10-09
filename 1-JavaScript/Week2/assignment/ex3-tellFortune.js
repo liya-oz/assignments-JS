@@ -32,9 +32,9 @@ body, this code is now written once only in a separated function.
 
 // This function should take an array as its parameter and return
 // a randomly selected element as its return value.
-function selectRandomly(arrow) {
-  const randomElement = arrow[Math.floor(Math.random() * arrow.length)];
-  return randomElement;
+function selectRandomly(arr) {
+  const randomElement = Math.floor(Math.random() * arr.length);
+  return arr[randomElement];
 }
 
 export function tellFortune(numKids, partnerNames, locations, jobTitles) {
