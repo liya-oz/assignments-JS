@@ -22,7 +22,6 @@ function doubleEvenNumbers(numbers) {
     }
   }
 */
-  console.log(newNumbers);
   return newNumbers;
 }
 

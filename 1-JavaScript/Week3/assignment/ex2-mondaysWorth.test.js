@@ -38,8 +38,6 @@ function computeEarnings(tasks, hourlyRate) {
   return result;
 }
 
-console.log(computeEarnings(mondayTasks, hourlyRate));
-
 // ! Unit tests (using Jest)
 describe('js-wk3-mondaysWorth', () => {
   test('computeEarnings should take two parameters', () => {

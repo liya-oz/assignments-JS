@@ -26,10 +26,10 @@ const fruitBasket = [
 
 // ! Function under test
 function sanitizeFruitBasket(fruitBasket, unwantedFruit) {
-  const sanitizedBasket = fruitBasket.filter(fruit => fruit !== unwantedFruit);
   if (!fruitBasket.includes(unwantedFruit)) {
-    console.log(`${unwantedFruit} not found in the basket`);
+    return `${unwantedFruit} not found in the basket`
   }
+  const sanitizedBasket = fruitBasket.filter(fruit => fruit !== unwantedFruit);
   return sanitizedBasket;
 }
 
