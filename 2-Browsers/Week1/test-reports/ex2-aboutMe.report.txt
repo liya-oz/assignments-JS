@@ -1,0 +1,18 @@
+*** Unit Test Error Report ***
+
+ PASS  .dist/2-Browsers/Week1/unit-tests/ex2-aboutMe.test.js (11.528 s)
+  br-wk1-ex2-aboutMe
+    ✅ should be syntactically valid (309 ms)
+    ✅ should have all TODO comments removed
+    ✅ each <li> should have the CSS class `list-item`
+    ✅ each <li> should rendered red (= rgb(255, 0, 0)) (80 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        13.41 s
+Ran all test suites matching /\/Users\/yuliiaozkan\/Desktop\/assignments-JS\/.dist\/2-Browsers\/Week1\/unit-tests\/ex2-aboutMe.test.js/i.
+
+*** Spell Checker Report ***
+
+2-Browsers/Week1/assignment/ex2-aboutMe/index.js:15:29 - Unknown word (Liya)
