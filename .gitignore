@@ -123,3 +123,6 @@ dist
 .disclaimer
 @assignment*
 .dist/
+
+/ex6-gameOfLife/ 
+ex6-gameOfLife.test.ts
