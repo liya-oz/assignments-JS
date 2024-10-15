@@ -1,0 +1,27 @@
+*** Unit Test Error Report ***
+
+Command failed: npx jest /Users/yuliiaozkan/Desktop/assignments-JS/.dist/2-Browsers/Week1/unit-tests/ex5-catWalk.test.js --colors --noStackTrace --json
+ FAIL  .dist/2-Browsers/Week1/unit-tests/ex5-catWalk.test.js (11.209 s)
+  br-wk1-ex5-catWalk
+    ❌ HTML should be syntactically valid (497 ms)
+    ✅ should have all TODO comments removed (1 ms)
+    ✅ should use `setInterval()` and/or `setTimeout()` (1 ms)
+    ✅ should use `window.onload` or `window.addEventListener()` for the `load` or `DOMContentLoaded` event
+    ✅ `window.onload` or `window.addEventListener` should not call its event handler function (1 ms)
+
+  ● br-wk1-ex5-catWalk › HTML should be syntactically valid
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: ""
+    Received: "
+    inline
+      15:6  error  <img> is missing required \"alt\" attribute  wcag/h37·
+    ✖ 1 problem (1 error, 0 warnings)
+    "
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 passed, 5 total
+Snapshots:   0 total
+Time:        13.172 s
+Ran all test suites matching /\/Users\/yuliiaozkan\/Desktop\/assignments-JS\/.dist\/2-Browsers\/Week1\/unit-tests\/ex5-catWalk.test.js/i.

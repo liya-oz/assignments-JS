@@ -10,3 +10,4 @@
 | ex2-aboutMe      |   4    |   -    |   ✓    |
 | ex3-hijackLogo   |   3    |   -    |   ✓    |
 | ex4-whatsTheTime |   6    |   -    |   ✓    |
+| ex5-catWalk      |   4    |   1    |   ✓    |

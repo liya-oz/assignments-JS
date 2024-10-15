@@ -20,43 +20,46 @@ Full description at: https://github.com/HackYourFuture/Assignments/tree/main/2-B
 
    https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif
 -----------------------------------------------------------------------------*/
-let currentCatPosition = 0; 
+let currentCatPosition = 0;
 const step = 10;
-const srcDancingCat = 'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif'; 
+const srcDancingCat =
+  'https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif';
 const walkingCatImg = document.querySelector('img');
 let walkingInterval;
-let catDanced = false; 
+let catDanced = false;
 
 function catWalk() {
   currentCatPosition += step;
   walkingCatImg.style.left = currentCatPosition + 'px';
 
-const pageWidth = window.innerWidth;
-const middleOfScreen = pageWidth / 2; 
+  const pageWidth = window.innerWidth;
+  const middleOfScreen = pageWidth / 2;
 
-if (currentCatPosition > middleOfScreen - (walkingCatImg.width / 2) &&
-        currentCatPosition < middleOfScreen + (walkingCatImg.width / 2) &&
-        !catDanced) {
-          catDanced = true;
-          catDance();
-        }
-
-
-        if (currentCatPosition >= pageWidth) {
-          currentCatPosition = 0; 
-          catDanced = false;
-        }
-      }
-
-  catDance(){
-    walkingCatImg.src = srcDancingCat;
-    setTimeout(() => {
-      walkingCatImg.src = 'http://www.anniemation.com/clip_art/images/cat-walk.gif'; // Replace with original cat image
-  }, 5000);
+  if (
+    currentCatPosition > middleOfScreen - walkingCatImg.width / 2 &&
+    currentCatPosition < middleOfScreen + walkingCatImg.width / 2 &&
+    !catDanced
+  ) {
+    catDanced = true;
+    catDance();
   }
-  function startWalking() {
-    walkingInterval = setInterval(catWalk, 50);
+
+  if (currentCatPosition >= pageWidth - walkingCatImg.width) {
+    currentCatPosition = 0;
+    catDanced = false;
+  }
+}
+
+function catDance() {
+  walkingCatImg.src = srcDancingCat;
+  setTimeout(() => {
+    walkingCatImg.src =
+      'http://www.anniemation.com/clip_art/images/cat-walk.gif'; // Replace with original cat image
+  }, 5000);
+}
+
+function startWalking() {
+  walkingInterval = setInterval(catWalk, 50);
 }
 
 window.addEventListener('DOMContentLoaded', startWalking);
-
