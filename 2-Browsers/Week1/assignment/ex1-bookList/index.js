@@ -20,6 +20,7 @@ https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/
 function createBookList(books) {
   const divBookList = document.getElementById('bookList');
   const bookList = document.createElement('ul');
+  const fragment = document.createDocumentFragment(); 
 
   const bookCovers = {
     'The Design of Everyday Things': './assets/the_design_of_everyday_things.jpg',
@@ -43,9 +44,9 @@ function createBookList(books) {
     book.alreadyRead ? (bookElement.style.backgroundColor = 'green') : (bookElement.style.backgroundColor = 'red');
 
     bookElement.appendChild(imgBook);
-    bookList.appendChild(bookElement);
+    fragment.appendChild(bookElement);
   });
-
+  bookList.appendChild(fragment); 
   return bookList;
 }
 

@@ -7,6 +7,7 @@ let hasDanced = false;
 let walkingInterval;
 
 function catWalk() {
+  walkingInterval = setInterval(catWalk, 50);
   const displayWidth = document.documentElement.clientWidth;
   const middleOfDisplay = displayWidth / 2;
 
@@ -36,8 +37,5 @@ function catWalk() {
   }
 }
 
-function startWalking() {
-  walkingInterval = setInterval(catWalk, 50);
-}
 
 window.onload = startWalking;
