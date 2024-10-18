@@ -10,15 +10,14 @@ window.onload = function () {
   function addCurrentTime() {
     const time = new Date();
 
-    const hours = time.getHours().toString().padStart(2, '0');
-    const minutes = time.getMinutes().toString().padStart(2, '0');
-    const seconds = time.getSeconds().toString().padStart(2, '0');
+    const currentTime = time.toLocaleTimeString('en-GB', {
+      minute: '2-digit',
+      second: '2-digit'
+    });
 
-    document.getElementById('disp').textContent =
-      hours + ':' + minutes + ':' + seconds;
-
-    console.log(hours + ':' + minutes + ':' + seconds);
+    document.getElementById('disp').textContent = currentTime;
   }
+  
   setInterval(addCurrentTime, 1000);
 
   addCurrentTime();

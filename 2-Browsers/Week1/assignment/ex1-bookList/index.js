@@ -19,7 +19,7 @@ https://hackyourfuture.github.io/example-pages/Browsers/Week1/1-booklist/
 
 function createBookList(books) {
   const divBookList = document.getElementById('bookList');
-  const ulElement = document.createElement('ul');
+  const bookList = document.createElement('ul');
 
   const bookCovers = {
     'The Design of Everyday Things': './assets/the_design_of_everyday_things.jpg',
@@ -27,26 +27,26 @@ function createBookList(books) {
     'The Pragmatic Programmer': './assets/the_pragmatic_programmer.jpg',
   };
 
-  divBookList.appendChild(ulElement);
+  divBookList.appendChild(bookList);
 
   books.forEach((book) => {
-    const liElement = document.createElement('li');
-    const pTitle = document.createElement('p');
+    const bookElement = document.createElement('li');
+    const bookTitle = document.createElement('p');
 
-    pTitle.textContent = `${book.title} written by ${book.author}`;
-    liElement.appendChild(pTitle);
+    bookTitle.textContent = `${book.title} written by ${book.author}`;
+    bookElement.appendChild(bookTitle);
 
     const imgBook = document.createElement('img');
     imgBook.src = bookCovers[book.title];
     imgBook.alt = `${book.title}`;
 
-    book.alreadyRead ? (liElement.style.backgroundColor = 'green') : (liElement.style.backgroundColor = 'red');
+    book.alreadyRead ? (bookElement.style.backgroundColor = 'green') : (bookElement.style.backgroundColor = 'red');
 
-    liElement.appendChild(imgBook);
-    ulElement.appendChild(liElement);
+    bookElement.appendChild(imgBook);
+    bookList.appendChild(bookElement);
   });
 
-  return ulElement;
+  return bookList;
 }
 
 function main() {
@@ -71,8 +71,8 @@ function main() {
     },
   ];
 
-  const ulElement = createBookList(myBooks);
-  document.querySelector('#bookList').appendChild(ulElement);
+  const bookElement = createBookList(myBooks);
+  document.querySelector('#bookList').appendChild(bookElement);
 }
 
 window.addEventListener('load', main);
